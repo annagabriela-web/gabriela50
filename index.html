@@ -100,7 +100,7 @@ body.home-on .links { margin-top: 10px }
 .save-date { color: var(--ink) }
 .home-count { margin: 14px auto 8px }
 .save-btn { width: 100%; max-width: 380px; margin-top: 10px; padding-block: 17px }
-.save-note { font-size: 13.5px; color: var(--ink2); margin-top: 4px }
+.save-note { font-size: 13.5px; color: var(--ink); font-weight: 600; margin-top: 10px }
 .gift { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 30px 8px 32px; border-top: .5px solid var(--line) }
 .gift-ico { width: 56px; height: 42px }
 .gift .dc-title { font-size: 40px; line-height: 1.1; max-width: 14ch }
@@ -831,7 +831,7 @@ const EVENTO = {
   hora: "11:00",          // formato 24 h
   referencia: "Referencia: vía E39, antes del parque de Riochico",         // ej. "Vía a Chone, km 12, finca La Esperanza"
   mapsUrl: "",            // enlace de Google Maps; vacío = búsqueda por nombre
-  confirmarAntesDe: "",   // ej. "25 de octubre"
+  confirmarAntesDe: "lunes 26 de octubre",   // ej. "lunes 26 de octubre"
   whatsapp: "524426156790",           // número con código de país, sin + ni espacios, ej. "5939XXXXXXXX"
   contacto: ""            // ej. "Ana"
 };
@@ -1022,12 +1022,12 @@ $("hora").textContent = horaTxt || "Por confirmar";
 document.querySelectorAll(".hora-v").forEach(el => el.textContent = $("hora").textContent);
 document.querySelectorAll(".hora-short").forEach(el => el.textContent = horaTxt || "Hora por confirmar");
 document.querySelectorAll(".hora-txt").forEach(el => el.textContent = horaTxt ? "A las " + horaTxt : "Hora por confirmar");
-document.querySelectorAll(".rsvp-txt").forEach(el => el.textContent = EVENTO.confirmarAntesDe ? "Confirma antes del " + EVENTO.confirmarAntesDe + "." : "Confirma lo antes posible.");
+document.querySelectorAll(".rsvp-txt").forEach(el => el.textContent = EVENTO.confirmarAntesDe ? "Confirma a más tardar el " + EVENTO.confirmarAntesDe + "." : "Confirma lo antes posible.");
 $("ref").textContent = EVENTO.referencia;
 if (EVENTO.referencia) $("ruta").textContent = "Por la carretera E39, el rancho queda antes de llegar al parque de Riochico y a la Unidad Educativa Fiscal 3 de Mayo.";
 if (EVENTO.contacto) $("dudas").textContent = "Escríbele a " + EVENTO.contacto + (EVENTO.whatsapp ? " al +" + EVENTO.whatsapp : "") + ".";
 $("maps").href = EVENTO.mapsUrl || "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("Rancho El Corozo, Riochico, Manabí, Ecuador");
-$("deadline").textContent = EVENTO.confirmarAntesDe ? "Por favor confirma antes del " + EVENTO.confirmarAntesDe + "." : "Por favor confirma lo antes posible.";
+$("deadline").textContent = EVENTO.confirmarAntesDe ? "Por favor confirma a más tardar el " + EVENTO.confirmarAntesDe + "." : "Por favor confirma lo antes posible.";
 $("contact").textContent = EVENTO.contacto ? "¿Dudas? Escríbele a " + EVENTO.contacto + (EVENTO.whatsapp ? " al +" + EVENTO.whatsapp : "") + "." : "";
 
 const [hh, mm] = (EVENTO.hora || "00:00").split(":").map(Number);
