@@ -607,14 +607,14 @@ html, body { overflow-x: clip }
 .gift-hl { color: var(--accent); font-weight: 700; white-space: nowrap }.faq-head { text-align: center; padding: 6px 0 22px }
 .faq-head .k { color: var(--ink2); font-size: 11px }
 .faq-head .dc-title { font-size: clamp(40px, 12vw, 54px); margin-top: 4px }/* Reserva el día termina en ondas */
-.card:has(> .save) { -webkit-mask: linear-gradient(#000,#000) top / 100% calc(100% - 17px) no-repeat, url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2048%2018%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%2C0%20L0.00%2C14.00%20L1.00%2C13.96%20L2.00%2C13.83%20L3.00%2C13.62%20L4.00%2C13.33%20L5.00%2C12.97%20L6.00%2C12.54%20L7.00%2C12.04%20L8.00%2C11.50%20L9.00%2C10.91%20L10.00%2C10.29%20L11.00%2C9.65%20L12.00%2C9.00%20L13.00%2C8.35%20L14.00%2C7.71%20L15.00%2C7.09%20L16.00%2C6.50%20L17.00%2C5.96%20L18.00%2C5.46%20L19.00%2C5.03%20L20.00%2C4.67%20L21.00%2C4.38%20L22.00%2C4.17%20L23.00%2C4.04%20L24.00%2C4.00%20L25.00%2C4.04%20L26.00%2C4.17%20L27.00%2C4.38%20L28.00%2C4.67%20L29.00%2C5.03%20L30.00%2C5.46%20L31.00%2C5.96%20L32.00%2C6.50%20L33.00%2C7.09%20L34.00%2C7.71%20L35.00%2C8.35%20L36.00%2C9.00%20L37.00%2C9.65%20L38.00%2C10.29%20L39.00%2C10.91%20L40.00%2C11.50%20L41.00%2C12.04%20L42.00%2C12.54%20L43.00%2C12.97%20L44.00%2C13.33%20L45.00%2C13.62%20L46.00%2C13.83%20L47.00%2C13.96%20L48.00%2C14.00%20L48%2C0%20Z%22%20fill%3D%22black%22/%3E%3C/svg%3E") bottom center / 48px 18px repeat-x; mask: linear-gradient(#000,#000) top / 100% calc(100% - 17px) no-repeat, url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2048%2018%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%2C0%20L0.00%2C14.00%20L1.00%2C13.96%20L2.00%2C13.83%20L3.00%2C13.62%20L4.00%2C13.33%20L5.00%2C12.97%20L6.00%2C12.54%20L7.00%2C12.04%20L8.00%2C11.50%20L9.00%2C10.91%20L10.00%2C10.29%20L11.00%2C9.65%20L12.00%2C9.00%20L13.00%2C8.35%20L14.00%2C7.71%20L15.00%2C7.09%20L16.00%2C6.50%20L17.00%2C5.96%20L18.00%2C5.46%20L19.00%2C5.03%20L20.00%2C4.67%20L21.00%2C4.38%20L22.00%2C4.17%20L23.00%2C4.04%20L24.00%2C4.00%20L25.00%2C4.04%20L26.00%2C4.17%20L27.00%2C4.38%20L28.00%2C4.67%20L29.00%2C5.03%20L30.00%2C5.46%20L31.00%2C5.96%20L32.00%2C6.50%20L33.00%2C7.09%20L34.00%2C7.71%20L35.00%2C8.35%20L36.00%2C9.00%20L37.00%2C9.65%20L38.00%2C10.29%20L39.00%2C10.91%20L40.00%2C11.50%20L41.00%2C12.04%20L42.00%2C12.54%20L43.00%2C12.97%20L44.00%2C13.33%20L45.00%2C13.62%20L46.00%2C13.83%20L47.00%2C13.96%20L48.00%2C14.00%20L48%2C0%20Z%22%20fill%3D%22black%22/%3E%3C/svg%3E") bottom center / 48px 18px repeat-x; margin-bottom: 26px !important; padding-bottom: 14px }
+.save-card { -webkit-mask: linear-gradient(#000,#000) top / 100% calc(100% - 17px) no-repeat, url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2048%2018%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%2C0%20L0.00%2C14.00%20L1.00%2C13.96%20L2.00%2C13.83%20L3.00%2C13.62%20L4.00%2C13.33%20L5.00%2C12.97%20L6.00%2C12.54%20L7.00%2C12.04%20L8.00%2C11.50%20L9.00%2C10.91%20L10.00%2C10.29%20L11.00%2C9.65%20L12.00%2C9.00%20L13.00%2C8.35%20L14.00%2C7.71%20L15.00%2C7.09%20L16.00%2C6.50%20L17.00%2C5.96%20L18.00%2C5.46%20L19.00%2C5.03%20L20.00%2C4.67%20L21.00%2C4.38%20L22.00%2C4.17%20L23.00%2C4.04%20L24.00%2C4.00%20L25.00%2C4.04%20L26.00%2C4.17%20L27.00%2C4.38%20L28.00%2C4.67%20L29.00%2C5.03%20L30.00%2C5.46%20L31.00%2C5.96%20L32.00%2C6.50%20L33.00%2C7.09%20L34.00%2C7.71%20L35.00%2C8.35%20L36.00%2C9.00%20L37.00%2C9.65%20L38.00%2C10.29%20L39.00%2C10.91%20L40.00%2C11.50%20L41.00%2C12.04%20L42.00%2C12.54%20L43.00%2C12.97%20L44.00%2C13.33%20L45.00%2C13.62%20L46.00%2C13.83%20L47.00%2C13.96%20L48.00%2C14.00%20L48%2C0%20Z%22%20fill%3D%22black%22/%3E%3C/svg%3E") bottom center / 48px 18px repeat-x; mask: linear-gradient(#000,#000) top / 100% calc(100% - 17px) no-repeat, url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2048%2018%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%2C0%20L0.00%2C14.00%20L1.00%2C13.96%20L2.00%2C13.83%20L3.00%2C13.62%20L4.00%2C13.33%20L5.00%2C12.97%20L6.00%2C12.54%20L7.00%2C12.04%20L8.00%2C11.50%20L9.00%2C10.91%20L10.00%2C10.29%20L11.00%2C9.65%20L12.00%2C9.00%20L13.00%2C8.35%20L14.00%2C7.71%20L15.00%2C7.09%20L16.00%2C6.50%20L17.00%2C5.96%20L18.00%2C5.46%20L19.00%2C5.03%20L20.00%2C4.67%20L21.00%2C4.38%20L22.00%2C4.17%20L23.00%2C4.04%20L24.00%2C4.00%20L25.00%2C4.04%20L26.00%2C4.17%20L27.00%2C4.38%20L28.00%2C4.67%20L29.00%2C5.03%20L30.00%2C5.46%20L31.00%2C5.96%20L32.00%2C6.50%20L33.00%2C7.09%20L34.00%2C7.71%20L35.00%2C8.35%20L36.00%2C9.00%20L37.00%2C9.65%20L38.00%2C10.29%20L39.00%2C10.91%20L40.00%2C11.50%20L41.00%2C12.04%20L42.00%2C12.54%20L43.00%2C12.97%20L44.00%2C13.33%20L45.00%2C13.62%20L46.00%2C13.83%20L47.00%2C13.96%20L48.00%2C14.00%20L48%2C0%20Z%22%20fill%3D%22black%22/%3E%3C/svg%3E") bottom center / 48px 18px repeat-x; margin-bottom: 26px !important; padding-bottom: 14px }
 /* Dudas frecuentes: un solo bloque */
 .faq { background: rgba(251,248,230,.12); -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); border: 1px solid rgba(251,248,230,.5); border-radius: 28px; margin-inline: calc(-1 * var(--gx)); padding: 40px var(--gx) 8px; position: relative }
 .faq .faq-head .k { color: #FBF8E6; text-shadow: 0 1px 6px rgba(20,35,5,.6) }
 .faq .faq-head .dc-title { color: #FBF8E6; text-shadow: 0 2px 10px rgba(20,35,5,.65) }
 .faq .gift { margin-bottom: 0 }
-.faq .dc.collage { margin-top: 0 !important }/* Vestimenta en computadora: foto a la izquierda, texto a la derecha (en celular sigue apilado) */
-@media (min-width: 561px) {
+.faq .dc.collage { margin-top: 0 !important }/* Vestimenta: foto a la izquierda, texto a la derecha */
+@media (min-width: 0px) {
   .c2 { width: 90%; max-width: 480px; grid-template-columns: 45% 55% }
   .c2-foto { border-right: 2px solid #B7C25A; border-bottom: 0; aspect-ratio: auto; min-height: 100% }
   .c2-foto img { object-position: 50% 15% }
@@ -624,6 +624,20 @@ html, body { overflow-x: clip }
   .fuc.f1 { width: 170px; right: 10% }
   .fuc.f4 { left: -22%; bottom: 0; top: auto; transform: translateY(8%) rotate(-104deg) }
   .card2 .dc-btns { width: 90%; max-width: 480px }
+}/* Vestimenta lado a lado en celular */
+@media (max-width: 560px) {
+  .c2 { width: 94%; grid-template-columns: 44% 56% }
+  .c2-foto { border-right: 2px solid #B7C25A; border-bottom: 0; aspect-ratio: auto; min-height: 100% }
+  .c2-info { padding: 50px 12px 18px; gap: 8px; min-height: 0 }
+  .c2-info .dc-title { font-size: 32px }
+  .card2 .c2-info .k { font-size: 10px !important; letter-spacing: .12em }
+  .card2 .c2-info .dc-txt { font-size: 14px !important; line-height: 1.5 !important }
+  .c2-orb { width: 92px; right: -9%; transform: translateY(-58%) rotate(12deg) }
+  .fuc.f1 { width: 130px; right: 12% }
+  .fuc.f2 { width: 110px }
+  .fuc.f3 { width: 100px }
+  .fuc.f4 { width: 110px; left: -16%; bottom: 0; top: auto; transform: translateY(10%) rotate(-104deg) }
+  .card2 .dc-btns { width: 94% }
 }</style>
 
 <div class="wrap">
@@ -670,7 +684,7 @@ html, body { overflow-x: clip }
       <li><time>14:00<small>p. m.</small></time><div class="nt"><span class="nt-t">Baile</span><span class="nt-d">A celebrar al ritmo de Christian Garcés y su banda</span></div><svg class="doodle" viewBox="0 0 46 46" aria-hidden="true"><path d="M16,34 L16,10 L38,5 L38,29" fill="none" stroke="#35430B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="11.5" cy="35" rx="5.5" ry="4.2" fill="none" stroke="#35430B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="33.5" cy="30" rx="5.5" ry="4.2" fill="none" stroke="#35430B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M16,16 L38,11" fill="none" stroke="#35430B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
     </ol>
   </section>
-<div class="card">
+<div class="card save-card">
   <section class="save" aria-labelledby="save-t">
     <h2 id="save-t" class="dc-title">Reserva el día</h2>
     <p class="caps save-date">Sábado 07 · noviembre · 2026</p>
