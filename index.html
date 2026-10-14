@@ -599,14 +599,19 @@ html, body { overflow-x: clip }
 @media (min-width: 560px) { .al-grid { grid-template-columns: repeat(4, 1fr) } }
 
 /* Regalo: tarjeta tipo sobre para que destaque */
-.card:has(> .gift) { padding-block: 26px }
+
 .gift { background: #FBF8E6; border: 1px solid rgba(181,52,90,.55) !important; border-radius: 20px; outline: 1px dotted rgba(181,52,90,.7); outline-offset: -9px; box-shadow: 0 14px 30px -18px rgba(30,45,10,.55); padding: 34px 22px 36px !important; max-width: 520px; margin: 0 auto }
 .gift-ico { width: 72px; height: 54px }
 .gift-k { color: var(--accent); font-size: 12px !important; letter-spacing: .26em; margin-top: 2px }
 .gift .dc-title { font-weight: 400 !important }
 .gift-hl { color: var(--accent); font-weight: 700; white-space: nowrap }.faq-head { text-align: center; padding: 6px 0 22px }
 .faq-head .k { color: var(--ink2); font-size: 11px }
-.faq-head .dc-title { font-size: clamp(40px, 12vw, 54px); margin-top: 4px }</style>
+.faq-head .dc-title { font-size: clamp(40px, 12vw, 54px); margin-top: 4px }/* Reserva el día termina en ondas */
+.card:has(> .save) { -webkit-mask: linear-gradient(#000,#000) top / 100% calc(100% - 17px) no-repeat, url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2048%2018%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%2C0%20L0.00%2C14.00%20L1.00%2C13.96%20L2.00%2C13.83%20L3.00%2C13.62%20L4.00%2C13.33%20L5.00%2C12.97%20L6.00%2C12.54%20L7.00%2C12.04%20L8.00%2C11.50%20L9.00%2C10.91%20L10.00%2C10.29%20L11.00%2C9.65%20L12.00%2C9.00%20L13.00%2C8.35%20L14.00%2C7.71%20L15.00%2C7.09%20L16.00%2C6.50%20L17.00%2C5.96%20L18.00%2C5.46%20L19.00%2C5.03%20L20.00%2C4.67%20L21.00%2C4.38%20L22.00%2C4.17%20L23.00%2C4.04%20L24.00%2C4.00%20L25.00%2C4.04%20L26.00%2C4.17%20L27.00%2C4.38%20L28.00%2C4.67%20L29.00%2C5.03%20L30.00%2C5.46%20L31.00%2C5.96%20L32.00%2C6.50%20L33.00%2C7.09%20L34.00%2C7.71%20L35.00%2C8.35%20L36.00%2C9.00%20L37.00%2C9.65%20L38.00%2C10.29%20L39.00%2C10.91%20L40.00%2C11.50%20L41.00%2C12.04%20L42.00%2C12.54%20L43.00%2C12.97%20L44.00%2C13.33%20L45.00%2C13.62%20L46.00%2C13.83%20L47.00%2C13.96%20L48.00%2C14.00%20L48%2C0%20Z%22%20fill%3D%22black%22/%3E%3C/svg%3E") bottom center / 48px 18px repeat-x; mask: linear-gradient(#000,#000) top / 100% calc(100% - 17px) no-repeat, url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2048%2018%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%2C0%20L0.00%2C14.00%20L1.00%2C13.96%20L2.00%2C13.83%20L3.00%2C13.62%20L4.00%2C13.33%20L5.00%2C12.97%20L6.00%2C12.54%20L7.00%2C12.04%20L8.00%2C11.50%20L9.00%2C10.91%20L10.00%2C10.29%20L11.00%2C9.65%20L12.00%2C9.00%20L13.00%2C8.35%20L14.00%2C7.71%20L15.00%2C7.09%20L16.00%2C6.50%20L17.00%2C5.96%20L18.00%2C5.46%20L19.00%2C5.03%20L20.00%2C4.67%20L21.00%2C4.38%20L22.00%2C4.17%20L23.00%2C4.04%20L24.00%2C4.00%20L25.00%2C4.04%20L26.00%2C4.17%20L27.00%2C4.38%20L28.00%2C4.67%20L29.00%2C5.03%20L30.00%2C5.46%20L31.00%2C5.96%20L32.00%2C6.50%20L33.00%2C7.09%20L34.00%2C7.71%20L35.00%2C8.35%20L36.00%2C9.00%20L37.00%2C9.65%20L38.00%2C10.29%20L39.00%2C10.91%20L40.00%2C11.50%20L41.00%2C12.04%20L42.00%2C12.54%20L43.00%2C12.97%20L44.00%2C13.33%20L45.00%2C13.62%20L46.00%2C13.83%20L47.00%2C13.96%20L48.00%2C14.00%20L48%2C0%20Z%22%20fill%3D%22black%22/%3E%3C/svg%3E") bottom center / 48px 18px repeat-x; margin-bottom: 26px !important; padding-bottom: 14px }
+/* Dudas frecuentes: un solo bloque */
+.faq { background: #E6E8BA; margin-inline: calc(-1 * var(--gx)); padding: 40px var(--gx) 8px; box-shadow: 0 18px 40px -20px rgba(30,45,10,.55); position: relative }
+.faq .gift { margin-bottom: 0 }
+.faq .dc.collage { margin-top: 0 !important }</style>
 
 <div class="wrap">
 <div class="batik" id="topband" aria-hidden="true"></div>
@@ -667,14 +672,13 @@ html, body { overflow-x: clip }
     <p class="save-note rsvp-txt"></p>
   </section>
 </div>
-<div class="card">
+<div class="faq">
   <div class="faq-head"><p class="k">Antes de la fiesta</p><h2 class="dc-title">Dudas frecuentes</h2></div><section class="gift" aria-labelledby="gift-t">
     <svg viewBox="0 0 60 44" class="gift-ico" aria-hidden="true"><g fill="none" stroke="#6F7F1C" stroke-width="1.4" stroke-linejoin="round"><rect x="4" y="6" width="52" height="34"/><path d="M4,6 L30,26 L56,6"/><path d="M4,40 L23,21 M56,40 L37,21" stroke-width=".8"/></g><circle cx="30" cy="26" r="4" fill="#B5345A"/></svg>
     <p class="k gift-k">¿Qué regalar?</p>
     <h2 id="gift-t" class="dc-title">¡No hay mejor regalo que tu presencia!</h2>
     <p class="dc-txt">Sin embargo, si deseas tener un detalle con Gabriela, agradeceremos que tu presente sea en <b class="gift-hl">sobre cerrado</b>.</p>
   </section>
-</div>
   <section class="dc collage card2" aria-labelledby="dc-t">
     <div class="c2">
       <span class="c2-flor fuc f1" aria-hidden="true"></span>
@@ -695,6 +699,7 @@ html, body { overflow-x: clip }
       <button class="btn solid" type="button" data-go="vestimenta" data-tab="ellos">Ver más · Ellos</button>
     </div>
   </section>
+</div>
   <footer class="credit"><div class="credit-brand"><span class="credit-k">Invitación diseñada por</span><span class="credit-n">Lums</span><p class="credit-t"><b class="credit-esp">Especialistas en regalos personalizados.</b><span class="credit-br"></span>Diseñamos y elegimos con cuidado los mejores recuerdos para tus eventos.</p></div><div class="credit-cta"><p class="credit-h">¿Tienes un evento?</p><p class="credit-q">Menciona este evento y recibe <b>10%</b> en tu primer pedido.</p><div class="credit-btns"><a class="credit-btn" href="https://wa.me/593996596843?text=Hola%20Lums%2C%20vengo%20de%20la%20invitaci%C3%B3n%20de%20los%2050%20de%20Gabriela%20y%20me%20gustar%C3%ADa%20cotizar%20para%20mi%20evento." target="_blank" rel="noopener">WhatsApp</a><a class="credit-btn credit-ig" href="https://www.instagram.com/lums_velas.ec/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></svg>Instagram</a></div><a class="credit-tel" href="https://wa.me/593996596843?text=Hola%20Lums%2C%20vengo%20de%20la%20invitaci%C3%B3n%20de%20los%2050%20de%20Gabriela%20y%20me%20gustar%C3%ADa%20cotizar%20para%20mi%20evento." target="_blank" rel="noopener">+593 99 659 6843</a></div></footer>
 </main>
 
