@@ -467,9 +467,16 @@ html, body { overflow-x: clip }
 .story { padding-top: clamp(80px, 22vw, 110px) !important }
 .story { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 40px 12px 42px }
 .story .k { font-size: 10px; letter-spacing: .3em; color: var(--ink2) }
-.st-title { font-family: var(--f-script); font-weight: 400; font-size: clamp(38px, 11vw, 52px); line-height: 1.05; color: #6F7F1C }
+.story .st-top { font-size: 13px !important; font-weight: 800; letter-spacing: .22em !important; color: #6F7F1C }
+.st-title { font-family: var(--f-script); font-weight: 400; font-size: clamp(36px, 11vw, 52px); line-height: 1.05; color: #6F7F1C; text-wrap: balance }
 .st-lead { font-family: var(--f-display); font-style: italic; font-size: clamp(15px, 4.2vw, 18px); line-height: 1.6; color: #4A5418; max-width: 30ch }
 .st-body { font-family: var(--f-body); font-weight: 300; font-size: 14.5px; line-height: 1.75; color: #4A5418; max-width: 36ch }
+/* legibilidad 50+ en la tarjeta de portada */
+.story { gap: 16px !important }
+.story .st-top { font-size: 15px !important; letter-spacing: .16em !important; font-weight: 800 }
+.story .st-title { font-size: clamp(44px, 13vw, 62px) !important; line-height: 1.02 }
+.story .st-lead { font-size: clamp(20px, 5.6vw, 23px) !important; line-height: 1.5 !important; color: #3F4A12; max-width: 24ch }
+.story .st-body { font-size: 18px !important; font-weight: 400 !important; line-height: 1.6 !important; color: #3F4A12; max-width: 30ch }
 .more-links { display: flex; justify-content: center; padding: 6px 0 30px }
 .more-links .btn { padding-inline: 22px }
 .gift .dc-title { font-family: var(--f-body) !important; font-weight: 300 !important; font-size: clamp(20px, 6vw, 28px) !important; line-height: 1.3 !important; letter-spacing: .02em; max-width: 18ch !important; color: #4A5418 !important }
@@ -676,16 +683,16 @@ html, body { overflow-x: clip }
 </section>
 <div class="card story-card">
   <section class="story" aria-labelledby="st-t">
-    <p class="k">Nuestra celebración</p>
-    <h2 id="st-t" class="st-title">Cincuenta años de alegría</h2>
-    <p class="st-lead">De vivir cerca de Dios, de ser un pilar fundamental en su familia y una amiga incondicional.</p>
-    <p class="st-body">Gabriela recibe cada cumpleaños con entusiasmo, porque para ella cada día es un regalo. Por eso queremos que estén presentes quienes la han acompañado en este grandioso camino llamado vida.</p>
+    <p class="k st-top">Lo mejor está por venir</p>
+    <h2 id="st-t" class="st-title">Cincuenta años de Gabriela</h2>
+    <p class="st-lead">De ser una amiga incondicional, el corazón de la familia y la alegría de cada espacio.</p>
+    <p class="st-body">Queremos que nos acompañes a festejar esta nueva etapa a su lado.</p>
   </section>
 </div>
   <section class="plan" aria-labelledby="plan-t">
     <div class="ev-head"><h2 id="plan-t" class="plan-title">Detalles<br>del evento</h2><p class="ev-month">NOV<span>Sábado 07</span></p></div>
     <ol class="ev">
-      <li><time>11:00<small>a. m.</small></time><div class="nt"><span class="nt-t">Recepción</span><span class="nt-d">Bienvenida en el rancho</span></div><svg class="doodle" viewBox="0 0 40 50" aria-hidden="true"><path d="M8,6 C8,20 14,24 20,24 C26,24 32,20 32,6 Z M10,12 C16,14 24,10 31,12 M20,24 L20,42 M12,44 C16,42 24,42 28,44" fill="none" stroke="#35430B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+      <li><time>11:00<small>a. m.</small></time><div class="nt"><span class="nt-t">Recepción</span><span class="nt-d">Bienvenida en el rancho El Corozo</span></div><svg class="doodle" viewBox="0 0 40 50" aria-hidden="true"><path d="M8,6 C8,20 14,24 20,24 C26,24 32,20 32,6 Z M10,12 C16,14 24,10 31,12 M20,24 L20,42 M12,44 C16,42 24,42 28,44" fill="none" stroke="#35430B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
       <li><time>12:00<small>p. m.</small></time><div class="nt"><span class="nt-t">Programa y fotos</span><span class="nt-d">Celebramos a Gabriela</span></div><svg class="doodle" viewBox="0 0 50 40" aria-hidden="true"><path d="M5,13 C5,10 7,9 9,9 L15,9 L18,4 L30,4 L33,9 L41,9 C44,9 45,11 45,13 L45,32 C45,34 43,35 41,35 L9,35 C7,35 5,34 5,32 Z" fill="none" stroke="#35430B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25" cy="21" r="8" fill="none" stroke="#35430B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25" cy="21" r="3.5" fill="none" stroke="#35430B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M38,14 l2,0" fill="none" stroke="#35430B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
       <li><time>12:30<small>p. m.</small></time><div class="nt"><span class="nt-t">Almuerzo</span></div><svg class="doodle" viewBox="0 0 56 40" aria-hidden="true"><circle cx="28" cy="20" r="15" fill="none" stroke="#35430B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="28" cy="20" r="9" fill="none" stroke="#35430B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5,6 L5,14 C5,17 9,17 9,14 L9,6 M7,16 L7,36 M48,6 C52,8 52,18 48,20 L48,36" fill="none" stroke="#35430B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
       <li><time>14:00<small>p. m.</small></time><div class="nt"><span class="nt-t">Baile</span><span class="nt-d">A celebrar al ritmo de Christian Garcés y su banda</span></div><svg class="doodle" viewBox="0 0 46 46" aria-hidden="true"><path d="M16,34 L16,10 L38,5 L38,29" fill="none" stroke="#35430B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="11.5" cy="35" rx="5.5" ry="4.2" fill="none" stroke="#35430B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="33.5" cy="30" rx="5.5" ry="4.2" fill="none" stroke="#35430B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M16,16 L38,11" fill="none" stroke="#35430B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
@@ -942,7 +949,8 @@ const INVITADOS = {
   "paola-cevallos": ["Sra. Paola Cevallos", 1],
   "lolinga-pinargote": ["Sra. Lolinga Pinargote", 1],
   "arq-polanco": ["Arq. Jimmy Polanco y Señora", 2],
-  "whisinky": ["Whisinky", 2],
+  "whisinky": ["Sr. Wyszynszky Obando y Señora", 2],
+  "wyszynszky-obando": ["Sr. Wyszynszky Obando y Señora", 2],
   "la-mica": ["Sra. Olga Cañarte", 1],
   "kemil-chanfong": ["Sr. Kemil Chanfong y Señora", 2],
   "jose-luis-bravo": ["Sr. José Luis Bravo", 2],
@@ -969,7 +977,7 @@ const INVITADOS = {
   "corina-vinces": ["Sra. Corina Vinces", 1],
   "gabriela-jaramillo": ["Srta. Gabriela Jaramillo", 1],
   "daisy-intriago": ["Sra. Daisy Intriago", 1],
-  "jafet-lopez": ["Sr. Jafet López", 2],
+  "jafet-lopez": ["Sr. Jafet López y Sra. Lucy Cristina Cevallos", 2],
   "armando-cevallos": ["Sr. Armando Cevallos y Sra. Andrea Vélez", 2],
   "bernardo-briones": ["Sr. Bernardo Briones", 2],
   "karen-carrillo": ["Srta. Karen Carrillo y acompañante", 2],
