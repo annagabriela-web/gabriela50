@@ -641,6 +641,10 @@ html, body { overflow-x: clip }
 .c2-q-t { font-family: var(--f-script); font-weight: 400; font-size: 46px; line-height: 1.05; color: #6F7F1C; letter-spacing: 0; text-transform: none; margin-top: 2px }
 .c2-info .dc-title { display: none }
 @media (max-width: 560px) { .c2-foto { aspect-ratio: 1 / 1 !important } .c2-foto img { object-position: 50% 18% !important } .c2-info { padding: 16px 18px 18px !important } }
+/* Botones Ellas / Ellos dentro de la tarjeta de vestimenta */
+.c2 > .dc-btns { grid-column: 1 / -1; width: auto !important; max-width: none !important; margin: 0 !important; padding: 4px 18px 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #FBF8E6 }
+.c2 > .dc-btns .btn { box-shadow: none !important; padding-inline: 8px; font-size: 13.5px }
+@media (min-width: 561px) { .c2 > .dc-btns { padding: 16px 22px 20px; border-top: 1px solid #DDE0A8 } }
 </style>
 
 <div class="wrap">
@@ -724,10 +728,10 @@ html, body { overflow-x: clip }
         <h2 id="dc-t" class="dc-title">Cóctel</h2>
         <p class="dc-txt">Nos inspiramos en la elegancia de la Costa ecuatoriana del siglo XX y en sus diseños nobles: lino, encajes y ruedos que aportan frescura y distinción, ideales para nuestro clima.</p>
       </div>
-    </div>
-    <div class="dc-btns">
+      <div class="dc-btns">
       <button class="btn solid" type="button" data-go="vestimenta" data-tab="ellas">Ver más · Ellas</button>
       <button class="btn solid" type="button" data-go="vestimenta" data-tab="ellos">Ver más · Ellos</button>
+    </div>
     </div>
   </section>
 </div>
