@@ -1066,7 +1066,19 @@ if (invCode && INVITADOS[invCode]) {
 } else if (!GQ.get("para")) {
   try { const g = sessionStorage.getItem("g50"); if (g) GQ = new URLSearchParams(g); } catch (e) {}
 }
-window.addEventListener("popstate", () => { STACK.pop(); show((location.hash || "#inicio").slice(1), false, true); });
+/* Invitado nuevo que el telefono aun no conoce (pagina vieja en cache): bajar la lista actual y mostrar su nombre */
+if (invCode && !INVITADOS[invCode]) {
+  let tried = false;
+  try { tried = sessionStorage.getItem("g50-try-" + invCode) === "1"; sessionStorage.setItem("g50-try-" + invCode, "1"); } catch (e) {}
+  if (!tried) {
+    fetch(location.pathname + "?v=" + Date.now(), { cache: "no-store" }).then(r => r.text()).then(t => {
+      const m = t.match(new RegExp('"' + invCode + '": \\["([^"]+)", (\\d+)\\]'));
+      if (!m) return;
+      try { sessionStorage.setItem("g50", new URLSearchParams({ para: m[1], c: m[2] }).toString()); } catch (e) { return; }
+      location.replace(location.pathname);
+    }).catch(() => {});
+  }
+}window.addEventListener("popstate", () => { STACK.pop(); show((location.hash || "#inicio").slice(1), false, true); });
 show((location.hash || "#inicio").slice(1), false);
 
 /* ----- datos bancarios ----- */
