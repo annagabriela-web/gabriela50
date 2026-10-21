@@ -1079,7 +1079,7 @@ if (invCode && INVITADOS[invCode]) {
   GQ = new URLSearchParams(location.hash.slice(1));
   try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {}
   try { sessionStorage.setItem("g50", GQ.toString()); } catch (e) {}
-} else if (!GQ.get("para")) {
+} else if (!GQ.get("para") && !invCode) {
   try { const g = sessionStorage.getItem("g50"); if (g) GQ = new URLSearchParams(g); } catch (e) {}
 }
 /* Invitado nuevo que el telefono aun no conoce (pagina vieja en cache): bajar la lista actual y mostrar su nombre */
