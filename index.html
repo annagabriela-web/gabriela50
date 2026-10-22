@@ -1130,7 +1130,7 @@ tabs.forEach((t, i) => {
 });
 
 /* Enlace directo a la vestimenta (desde la invitacion sencilla): #vestimenta-ellas / #vestimenta-ellos */
-function abrirVestimentaDirecta() { const m = location.hash.match(/^#vestimenta-(ellas|ellos)$/); if (!m) return; show("vestimenta", false); selectTab($("tab-" + m[1])); let volver = null; try { volver = sessionStorage.getItem("g50-volver"); } catch (e) {} if (volver) document.querySelectorAll("#v-vestimenta [data-back]").forEach(b => { b.innerHTML = "&larr; Volver a mi invitaci&oacute;n"; b.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); location.href = volver; }, true); }); try { history.replaceState({ v: "vestimenta" }, "", "#vestimenta"); } catch (e) {} }
+function abrirVestimentaDirecta() { const m = location.hash.match(/^#vestimenta-(ellas|ellos)$/); if (!m) return; show("vestimenta", false); selectTab($("tab-" + m[1])); let volver = null; try { volver = sessionStorage.getItem("g50-volver"); } catch (e) {} if (volver) document.querySelectorAll("#v-vestimenta [data-back]").forEach(b => { b.innerHTML = "&larr; Volver a mi invitaci&oacute;n"; b.setAttribute("aria-label", "Volver a mi invitación"); b.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); location.href = volver; }, true); }); try { history.replaceState({ v: "vestimenta" }, "", "#vestimenta"); } catch (e) {} }
 abrirVestimentaDirecta(); window.addEventListener("hashchange", abrirVestimentaDirecta);
 
 /* ----- datos del evento ----- */
