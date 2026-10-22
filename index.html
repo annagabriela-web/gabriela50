@@ -1130,7 +1130,8 @@ tabs.forEach((t, i) => {
 });
 
 /* Enlace directo a la vestimenta (desde la invitacion sencilla): #vestimenta-ellas / #vestimenta-ellos */
-(() => { const m = location.hash.match(/^#vestimenta-(ellas|ellos)$/); if (!m) return; show("vestimenta", false); selectTab($("tab-" + m[1])); try { history.replaceState({ v: "vestimenta" }, "", "#vestimenta"); } catch (e) {} })();
+function abrirVestimentaDirecta() { const m = location.hash.match(/^#vestimenta-(ellas|ellos)$/); if (!m) return; show("vestimenta", false); selectTab($("tab-" + m[1])); try { history.replaceState({ v: "vestimenta" }, "", "#vestimenta"); } catch (e) {} }
+abrirVestimentaDirecta(); window.addEventListener("hashchange", abrirVestimentaDirecta);
 
 /* ----- datos del evento ----- */
 const horaTxt = (() => { if (!EVENTO.hora) return ""; let [H, M] = EVENTO.hora.split(":").map(Number); const ap = H < 12 ? "a. m." : "p. m."; H = H % 12 || 12; return H + ":" + String(M).padStart(2, "0") + " " + ap; })();
