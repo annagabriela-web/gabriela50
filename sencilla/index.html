@@ -161,6 +161,8 @@
     $("wa").href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(txt);
     if (code) $("full").href = "../#i-" + code;
   }
+  // Para que "Volver" en la vestimenta regrese a esta tarjeta
+  document.querySelectorAll(".vest-btns a").forEach(a => a.addEventListener("click", () => { try { sessionStorage.setItem("g50-volver", location.href); } catch (e) {} }));
   pintar();
 
   // Toma nombre, fecha limite y WhatsApp de la invitacion completa, para que siempre coincidan.
