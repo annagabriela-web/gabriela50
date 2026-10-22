@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Los 50 años de Gabriela</title>
+<meta name="description" content="Fabricio, Mario y Anita te invitan a celebrar los 50 años de Gabriela. Sábado 7 de noviembre, 11:00 a. m., Rancho El Corozo, Riochico.">
+<meta property="og:title" content="Los 50 años de Gabriela">
+<meta property="og:description" content="Sábado 7 de noviembre · 11:00 a. m. · Rancho El Corozo, Riochico">
+<meta property="og:image" content="https://los50degabriela.es/og.jpg">
+<meta name="theme-color" content="#6E982E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Mulish:wght@400;600;700;800&family=Parisienne&display=swap" rel="stylesheet">
+<style>
+  :root { --ink: #2E3A0A; --ink2: #4A5418; --olive: #6F7F1C; --line: #CFCD98; --cream: #FBF8E6; --accent: #B5345A; --wa: #1E7A3C }
+  * { box-sizing: border-box }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100% }
+  body { margin: 0; background: #6E982E; color: var(--ink); font-family: 'Mulish', 'Segoe UI', system-ui, sans-serif; font-size: 19px; line-height: 1.5;
+    padding: 14px max(12px, env(safe-area-inset-right)) 18px max(12px, env(safe-area-inset-left)) }
+  main { max-width: 480px; margin: 0 auto; display: grid; gap: 12px }
+  .card { background: var(--cream); border-radius: 18px; padding: 22px 20px; box-shadow: 0 10px 24px -14px rgba(20,35,5,.6) }
+
+  /* Encabezado */
+  .head { text-align: center; outline: 1px dotted rgba(181,52,90,.7); outline-offset: -9px; border: 1px solid rgba(181,52,90,.5); padding: 26px 20px 22px }
+  .hosts { font-family: 'Libre Baskerville', Georgia, serif; font-size: 17px; line-height: 1.45; color: var(--ink2); margin: 0 }
+  .t1 { font-size: 24px; font-weight: 400; color: var(--ink2); margin: 10px 0 0 }
+  .name { font-family: 'Parisienne', cursive; font-weight: 400; font-size: 66px; line-height: 1.05; color: var(--olive); margin: 0 }
+  .para { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line) }
+  .para[hidden] { display: none }
+  .para .lbl { font-size: 12.5px; letter-spacing: .18em; text-transform: uppercase; font-weight: 800; color: var(--accent) }
+  .para .who { font-family: 'Libre Baskerville', Georgia, serif; font-weight: 700; font-size: 21px; line-height: 1.3; margin: 4px 0 0 }
+  .para .cupo { font-size: 16px; color: var(--ink2); margin: 2px 0 0 }
+
+  /* Datos */
+  .info { padding: 6px 20px }
+  .row { padding: 14px 0; border-bottom: 1px solid var(--line) }
+  .row:last-child { border-bottom: 0 }
+  .k { display: block; font-size: 12.5px; letter-spacing: .18em; text-transform: uppercase; font-weight: 800; color: var(--olive); margin-bottom: 2px }
+  .v { margin: 0; font-weight: 700; font-size: 20px; line-height: 1.35 }
+  .s { margin: 2px 0 0; font-size: 17px; color: var(--ink2) }
+  .hl { color: var(--accent); font-weight: 800 }
+
+  /* Botones */
+  .btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 56px; margin-top: 10px; padding: 12px 16px; border-radius: 14px;
+    font: 800 18px/1.2 'Mulish', system-ui, sans-serif; text-decoration: none; text-align: center }
+  .btn-map { background: #fff; color: var(--ink); border: 2px solid var(--olive) }
+  .btn-wa { background: var(--wa); color: #fff; font-size: 19px; min-height: 62px }
+  .btn svg { width: 24px; height: 24px; flex: none }
+  .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px }
+
+  .rsvp { text-align: center; padding: 20px }
+  .rsvp .v { font-size: 19px }
+  .more { text-align: center; margin: 4px 0 0; font-size: 16px }
+  .more a { color: #FBF8E6; font-weight: 700 }
+
+  @media (max-width: 359px) { body { font-size: 18px } .name { font-size: 56px } .v { font-size: 19px } }
+</style>
+</head>
+<body>
+<main>
+  <section class="card head" aria-labelledby="t">
+    <p class="hosts">Fabricio, Mario y Anita<br>te invitan a celebrar</p>
+    <h1 id="t" class="t1">Los 50 años de</h1>
+    <p class="name">Gabriela</p>
+    <div class="para" id="para" hidden>
+      <div class="lbl">Invitación para</div>
+      <p class="who" id="who"></p>
+      <p class="cupo" id="cupo"></p>
+    </div>
+  </section>
+
+  <section class="card info" aria-label="Datos de la fiesta">
+    <div class="row">
+      <span class="k">Cuándo</span>
+      <p class="v">Sábado 7 de noviembre</p>
+      <p class="s">A las 11:00 de la mañana</p>
+    </div>
+    <div class="row">
+      <span class="k">Dónde</span>
+      <p class="v">Rancho El Corozo<br>Riochico, Manabí</p>
+      <p class="s">Vía E39, antes del parque de Riochico y de la U. E. Fiscal 3 de Mayo</p>
+      <a class="btn btn-map" id="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Rancho%20El%20Corozo%2C%20Riochico%2C%20Manab%C3%AD%2C%20Ecuador" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#6F7F1C" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+        Cómo llegar
+      </a>
+    </div>
+    <div class="row">
+      <span class="k">Vestimenta</span>
+      <p class="v">Cóctel</p>
+      <p class="s">Por favor, evita el <span class="hl">azul</span> y el <span class="hl">celeste</span>: son los colores de la cumpleañera.</p>
+    </div>
+    <div class="row">
+      <span class="k">Regalo</span>
+      <p class="v">¡Tu presencia es el mejor regalo!</p>
+      <p class="s">Si deseas tener un detalle, que sea en <span class="hl">sobre cerrado</span>.</p>
+    </div>
+  </section>
+
+  <section class="card rsvp" aria-labelledby="c">
+    <span class="k" id="c">Confirma tu asistencia</span>
+    <p class="v">A más tardar el <span id="deadline">viernes 23 de octubre</span></p>
+    <a class="btn btn-wa" id="wa" href="https://wa.me/524426156790" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></svg>
+      Confirmar por WhatsApp
+    </a>
+  </section>
+
+  <p class="more"><a href="../" id="full">Ver la invitación completa</a></p>
+</main>
+
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const code = (location.hash.match(/^#i-([a-z0-9-]+)/) || [])[1];
+  let WA = "524426156790";
+  let nombre = "", cupos = 0;
+
+  function sinTitulo(n) { return n.replace(/^(Sr\.|Sra\.|Srta\.)\s+/, ""); }
+  function pintar() {
+    if (nombre) {
+      $("who").textContent = nombre;
+      $("cupo").textContent = "Válida para " + cupos + (cupos > 1 ? " personas" : " persona");
+      $("para").hidden = false;
+      document.title = "Invitación para " + nombre + " · Los 50 años de Gabriela";
+    }
+    const n = nombre ? sinTitulo(nombre) : "";
+    const txt = !n ? "Hola, confirmo mi asistencia a los 50 de Gabriela."
+      : cupos > 1 ? "Hola, somos " + n + ". Confirmamos nuestra asistencia: seremos " + cupos + " personas."
+      : "Hola, soy " + n + " y confirmo mi asistencia.";
+    $("wa").href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(txt);
+    if (code) $("full").href = "../#i-" + code;
+  }
+  pintar();
+
+  // Toma nombre, fecha límite y WhatsApp de la invitación completa, para que siempre coincidan.
+  fetch("../?v=" + Date.now(), { cache: "no-store" }).then(r => r.text()).then(t => {
+    if (code) {
+      const m = t.match(new RegExp('"' + code + '": \\["([^"]+)", (\\d+)\\]'));
+      if (m) { nombre = m[1]; cupos = parseInt(m[2], 10); }
+    }
+    const d = t.match(/confirmarAntesDe:\s*"([^"]+)"/); if (d && d[1]) $("deadline").textContent = d[1];
+    const w = t.match(/whatsapp:\s*"(\d+)"/); if (w) WA = w[1];
+    const mp = t.match(/mapsUrl:\s*"([^"]+)"/); if (mp && mp[1]) $("maps").href = mp[1];
+    pintar();
+  }).catch(() => {});
+})();
+</script>
+</body>
+</html>
