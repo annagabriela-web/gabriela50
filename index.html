@@ -1129,6 +1129,9 @@ tabs.forEach((t, i) => {
   t.addEventListener("keydown", (e) => { if (e.key === "ArrowRight" || e.key === "ArrowLeft") { const n = tabs[(i + 1) % 2]; selectTab(n); n.focus(); } });
 });
 
+/* Enlace directo a la vestimenta (desde la invitacion sencilla): #vestimenta-ellas / #vestimenta-ellos */
+(() => { const m = location.hash.match(/^#vestimenta-(ellas|ellos)$/); if (!m) return; show("vestimenta", false); selectTab($("tab-" + m[1])); try { history.replaceState({ v: "vestimenta" }, "", "#vestimenta"); } catch (e) {} })();
+
 /* ----- datos del evento ----- */
 const horaTxt = (() => { if (!EVENTO.hora) return ""; let [H, M] = EVENTO.hora.split(":").map(Number); const ap = H < 12 ? "a. m." : "p. m."; H = H % 12 || 12; return H + ":" + String(M).padStart(2, "0") + " " + ap; })();
 $("hora").textContent = horaTxt || "Por confirmar";
